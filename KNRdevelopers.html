@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KNR DEVELOPERS</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f3fff3;
+    color: #1b3d1b;
+}
+header {
+    position: relative;
+    height: 420px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: white;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 60, 0, 0.55);
+    z-index: 1;
+}
+.slider {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.slides {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    animation: slide 18s infinite;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    16.66% { transform: translateX(-16.66%); }
+    33.33% { transform: translateX(-33.33%); }
+    50% { transform: translateX(-50%); }
+    66.66% { transform: translateX(-66.66%); }
+    83.33% { transform: translateX(-83.33%); }
+    100% { transform: translateX(0); }
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.header-content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.header-content button {
+    padding: 12px 22px;
+    font-size: 1rem;
+    margin-top: 20px;
+    background: #1fa12e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.header-content button:hover {
+    background: #146d20;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 0;
+}
+h2 {
+    font-size: 2rem;
+    border-left: 6px solid #1fa12e;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+.services, .why, .contact {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+.service-item {
+    padding: 15px 0;
+    font-size: 1.1rem;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0f260f;
+    color: white;
+    margin-top: 40px;
+}
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.img-grid img {
+    width: 100%;
+    border-radius: 14px;
+}
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae" class="slide">
+            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6" class="slide">
+            <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" class="slide">
+            <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2" class="slide">
+            <img src="https://images.unsplash.com/photo-1535909339361-9b2bd316cc85" class="slide">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758" class="slide">
+        </div>
+    </div>
+    <div class="header-content">
+        <h1>KNR DEVELOPERS</h1>
+        <p>We care for your growth with the best investment</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Us</button>
+    </div>
+</header>
+
+<section class="container services">
+    <h2>Our Expertise</h2>
+    <div class="img-grid">
+        <img src="https://pbs.twimg.com/media/GRtV045XAAAuDNm?format=jpg&name=large" alt="Port View">
+        <img src="https://images.openai.com/static-rsc-1/ia5J_gVBYF4Hfg9CSO7zIXRKxc6Ein9_-3ApDI0x_5UarDPi5a7Uvpu9EMIsntqxrYxt7eZcatT_QFrwFpSHUQq1IgqcMvo_CkeiWUU9D0gYUaYQCmpt9CtFyDO-uNqVNv3iWciEy5JRJccR-V9WWw" alt="Construction">
+        <img src="https://images.openai.com/static-rsc-1/vRk9gh6UgQfKIQkGfWNMoall2uJACJnsWdAx9Fi-b3p92-a2KxffvlACHJSntll_pkpbi0oD6QunPoKDJM-eJfWKxkqj4DUzplM3jrGI-3O-GEZVmnMzS60NYBOYqcOgCSG65XOaLeq0LXIgEZNrHg" alt="Foundation">
+        <img src="https://images.openai.com/static-rsc-1/nfhTRZ-38iSqgKGNvJB_ltacmR-Ne_9KfbxNttBbqy7GpVt9srYhYt8y44EGr8TR69Trtwcfi8Y1DTC-D9OFTw22K8fLKSJV95R1UMAOCvOYDgVN5msJ6J8HuGcA3-xm1csL38KhBB9mUQqNZ7WMNQ" alt="Port Development">
+        <img src="https://images.openai.com/static-rsc-1/_aDp-T_XE1n5fhHEvlUi-awHrKp7ivKUaPyQFQ5wTsodjqmDYoV-uhvOGHRvKVXGQxva2HxXQU2bnJG25DHxPOti5lTQF6DjhxBCbkVi3cldlIGWhb4Z-U_iV6zR5--I5BrFXmMR-Gd9czpUVp2_MQ" alt="Port Growth">
+        <img src="https://media.licdn.com/dms/image/v2/D5622AQHIzz9F2B1AVQ/feedshare-shrink_800/B56ZlrshvcJwAg-/0/1758448586505?e=2147483647&v=beta&t=xdvg04cngnf7IuBoNUOtB4Y-VyEcJ3cz8cT_k5BCKIc" alt="Port Aerial">
+    </div>
+</section>
+
+<section class="container">
+    <h2>About Us</h2>
+    <p>KNR DEVELOPERS is committed to helping individuals and businesses invest in valuable land properties including commercial, residential, and farm lands. With trust, transparency, and long-term value, we ensure every investment grows with nature.</p>
+</section>
+
+<section class="container services">
+    <h2>Our Services</h2>
+    <div class="service-item"><strong>Commercial Properties:</strong> Prime locations ideal for shops, offices, and business expansions.</div>
+    <div class="service-item"><strong>Residential Properties:</strong> Beautiful layouts, safe neighborhoods, and premium housing plots.</div>
+    <div class="service-item"><strong>Farm Lands:</strong> Green, fertile lands perfect for agriculture and long-term investments.</div>
+</section>
+
+<section class="container">
+    <h2>Why Choose Us</h2>
+    <ul>
+        <li>Trusted and transparent service</li>
+        <li>Land value grows over time</li>
+        <li>Customer-focused approach</li>
+        <li>Eco-friendly and nature-aligned plots</li>
+    </ul>
+</section>
+
+<section id="contact" class="container contact">
+    <h2>Contact Us</h2>
+    <p><strong>Name:</strong> Naresh Reddy Korisipati</p>
+   <p style="font-size:1.1rem; font-weight:600;">
+  Contact: <span class="highlight-number">8333844400</span>
+</p>
+
+<style>
+.highlight-number {
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background-size: 200% 100%;
+  background-image: linear-gradient(90deg, #1fa12e, #a1ff7d, #1fa12e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slidebg 3s linear infinite;
+}
+
+@keyframes slidebg {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+</style>
+    <p><strong>Address:</strong> A B M Compound, Christian Peta, Kavali, Andhra Pradesh 524201</p>
+    <iframe src="https://www.google.com/maps?q=A+B+M+Compound,+Christian+Peta,+Kavali,+Andhra+Pradesh,+India&output=embed"></iframe>
+</section>
+
+<footer>
+    <p>KNR DEVELOPERS © 2025 | All Rights Reserved</p>
+   <p style="font-size:1rem; font-weight:600;">
+  Designed by <span class="rainbow-text">ISR-solutions</span>
+</p>
+
+<style>
+.rainbow-text {
+  font-weight: bold;
+  animation: colorchange 3s linear infinite;
+}
+
+/* Color changing animation */
+@keyframes colorchange {
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: yellow; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: violet; }
+}
+</style>
+</footer>
+
+</body>
+</html>
